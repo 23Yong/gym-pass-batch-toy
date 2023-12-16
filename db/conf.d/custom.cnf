@@ -1,0 +1,7 @@
+[client]
+default-character-set = utf8mb4
+
+[mysqld]
+# 기존 클라이언트에서 지원하지 않는 경우가 있어 기존 암호화방식으로 변경 (8.0 부터는 caching_sha2_password)
+# 이전 버전과의 호환성을 위한 설정
+authentication-policy = mysql_native_password
