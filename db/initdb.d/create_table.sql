@@ -67,8 +67,10 @@ CREATE TABLE `user`
 
 CREATE TABLE `gym`
 (
-    `gym_seq`  int         NOT NULL AUTO_INCREMENT COMMENT '헬스장 순번',
-    `gym_name` varchar(50) NOT NULL COMMENT '헬스장 이름',
+    `gym_seq`     int         NOT NULL AUTO_INCREMENT COMMENT '헬스장 순번',
+    `gym_name`    varchar(50) NOT NULL COMMENT '헬스장 이름',
+    `created_at`  timestamp   NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '생성 일시',
+    `modified_at` timestamp            DEFAULT NULL COMMENT '수정 일시',
     PRIMARY KEY (`gym_seq`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4 COMMENT ='헬스장';
